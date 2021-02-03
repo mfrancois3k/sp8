@@ -1,0 +1,123 @@
+/*============================================*/
+/* Basic Setup /
+/============================================*/
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*===== VARIABLES CSS =====*/
+:root {
+
+/*===== Colores =====*/
+--first-color: #F2A20C;
+--white-color: #E9EAEC;
+--dark-color: #272D40;
+--dark-color-lighten: #F2F5FF;
+
+/*===== Fonts  =====*/
+--body-font: 'Poppins', sans-serif;
+--h1-font-size: 1.5rem;
+--h2-font-size: 1.25rem;
+--normal-font-size: 1rem;
+--small-font-size: .875rem;
+
+/*==== Animation =====*/
+ --transition-speed: 600ms;
+}
+
+/*===== BASE =====*/
+*, ::before, ::after {
+box-sizing: border-box;
+}
+
+@media screen and (min-width: 968px) {
+    :root {
+      --biggest-font-size: 3.25rem;
+      --big-font-size: 2.25rem;
+      --normal-font-size: 1rem;
+      --smaller-font-size: 0.813rem;
+    }
+  }
+  
+  /*===== z index =====*/
+  :root {
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+  }
+  
+  /*===== BASE =====*/
+*, ::before, ::after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+body {
+  margin: 3rem 0 0 0;
+  font-family: var(--body-font);
+  background-color: var(--white-color);
+  color: var(--black-color);
+  background: url("https://images.unsplash.com/photo-1490868598135-7caf94d3fb4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80") no-repeat center center fixed, linear-gradient(0deg, #CB8358, #EEB95D); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sun {
+    float: left;
+    position: relative;
+    width: 600px;
+    height: 600px;
+    background-image: linear-gradient(0deg, #fff0, 40%, #f75);
+    border-radius: 50%;
+    transform: scale(0.5) translateY(0);
+    animation: upRising 5s linear infinite;
+}
+
+
+@keyframes upRising {
+    0% {
+      background-image: linear-gradient(0deg, #fff0 40%, #f75);
+      transform: scale(0.5) translateY(250px);
+      opacity: 0;
+    
+    }
+
+    50% {
+        background-image: linear-gradient(0deg, #fff0, 20% #f75);
+        transform: scale(0.5) translateY(150px);
+        opacity: 0.5;
+        }
+
+        80% {
+            background-image: linear-gradient(0deg, #fff0, 10% #f75);
+            transform: scale(0.5) translateY(50px);
+            opacity: 0.5;
+            } 
+
+        100% {
+            background-image: linear-gradient(0deg, orange, #f76);
+            transform: scale(0.5) translateY(0px);
+            opacity: 1;
+           
+            }   
+        }
